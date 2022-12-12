@@ -142,7 +142,7 @@ Menu will revert to the left side and stick to wall when resized */
     top: 90px;
   }
 
-  nav ul {
+  nav > ul {
     flex-direction: column;
     text-align: left;
   }
