@@ -18,6 +18,7 @@
   "homepage": "https://github.com/mjsirois/final-project--intro-to-internet-programming--cs-275--fall-2022#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-eslint": "^6.0.0",
     "gulp-html": "^5.0.0",
     "gulp-stylelint": "^13.0.0"
   }
