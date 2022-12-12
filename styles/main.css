@@ -37,16 +37,19 @@
   visibility: visible;
   opacity: 1;
   animation-name: opening-menu;
-  animation-duration: 1s;
+  animation-duration: .2s;
 }
 
 @keyframes opening-menu {
   from {
     opacity: 0;
+    transform: translateY(-25%);
   }
 
   to {
     opacity: 1;
+    transform: translateY(0);
+
   }
 }
 
@@ -60,13 +63,14 @@ ul li a {
 
 nav {
   background-color: rgb(57, 180, 217);
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   position: absolute;
   display: flex;
-  top: 118px;
+  left: 43%;
+  list-style-type: none;
+  top: 90px;
   width: 300px;
-  left: 50%;
-  transform: translate(-50%, -50%);
   visibility: hidden;
   opacity: 0;
 }
