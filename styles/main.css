@@ -1,3 +1,4 @@
+/* Back panel for modal that fills viewport and darkens rest of the screen */
 .modal-panel {
   display: none;
   top: 0;
@@ -9,6 +10,7 @@
   z-index: 1;
 }
 
+/* White box panel with content */
 .modal-content-panel {
   background-color: white;
   top: 0;
@@ -23,6 +25,7 @@
   animation-duration: 2s;
 }
 
+/* Minor animation for opening modal */
 @keyframes opening-modal {
   from {
     opacity: 0;
@@ -33,6 +36,7 @@
   }
 }
 
+/* Show class to make menu visible when pressing the button */
 .show {
   visibility: visible;
   opacity: 1;
@@ -40,6 +44,7 @@
   animation-duration: .3s;
 }
 
+/* Minor animation for opening drop down menu */
 @keyframes opening-menu {
   from {
     opacity: 0;
@@ -54,6 +59,7 @@ ul li {
   list-style: none;
 }
 
+/* CSS for manipulating menu */
 nav {
   background-color: rgb(57, 180, 217);
   margin-right: auto;
@@ -78,6 +84,7 @@ nav a {
   text-align: center;
 }
 
+/* Properties to help with drop down menu */
 nav ul li {
   text-align: center;
   width: 150px;
@@ -98,6 +105,7 @@ nav > ul > li:hover > ul {
   visibility: visible;
 }
 
+/* Anchor buttons */
 a {
   color: white;
   text-decoration: none;
@@ -111,6 +119,7 @@ header {
   font-size: larger;
 }
 
+/* Text below the buttons, added some properties to spice things up a little bit */
 main {
   color: rgb(74, 74, 74);
   padding-left: 5px;
@@ -122,6 +131,8 @@ body {
   margin: 0;
 }
 
+/* Making note of the breakpoint at 736px
+Menu will revert to the left side and stick to wall when resized */
 @media screen and (max-width: 736px) {
   nav {
     left: 0%;
@@ -132,10 +143,9 @@ body {
   }
 
   nav ul {
-      flex-direction: column;
-      text-align: left;
+    flex-direction: column;
+    text-align: left;
   }
-
 
   .show {
     visibility: visible;
@@ -144,6 +154,7 @@ body {
     animation-duration: .5s;
   }
 
+  /* Animation for opening side tray */
   @keyframes opening-menu-left {
     from {
       opacity: 0;
