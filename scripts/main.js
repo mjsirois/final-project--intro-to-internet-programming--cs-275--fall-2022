@@ -7,12 +7,15 @@ window.onload = () => {
     });
 
     window.addEventListener(`click`, (exit) => {
-        if (exit.target === modalBox) {
+        if(exit.target === modalBox) {
             modalBox.style.display = `none`;
         }
-
-
     });
 
+    document.addEventListener(`keydown`, (esc) => {
+        if(esc.key === `Escape`) {
+            modalBox.style.display = `none`;
+        }
+    });
 
 };
