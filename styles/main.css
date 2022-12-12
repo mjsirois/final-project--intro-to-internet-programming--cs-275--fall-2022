@@ -5,7 +5,7 @@
   height: 100%;
   width: 100%;
   position: fixed;
-  background-color: rgb(0, 0, 0, .5);
+  background-color: rgb(0, 0, 0, .8);
   z-index: 1;
 }
 
@@ -19,6 +19,8 @@
   height: 75%;
   width: 75%;
   position: absolute;
+  animation-name: opening-modal;
+  animation-duration: 2s;
 }
 
 header {
@@ -38,4 +40,14 @@ a {
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
+}
+
+@keyframes opening-modal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
