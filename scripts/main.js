@@ -22,7 +22,5 @@ window.onload = () => {
 
     showMenu.addEventListener(`click`, () => {
         menu.classList.toggle(`show`);
-
-
     });
 };

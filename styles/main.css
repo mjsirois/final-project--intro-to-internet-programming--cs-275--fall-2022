@@ -37,19 +37,16 @@
   visibility: visible;
   opacity: 1;
   animation-name: opening-menu;
-  animation-duration: .2s;
+  animation-duration: .3s;
 }
 
 @keyframes opening-menu {
   from {
     opacity: 0;
-    transform: translateY(-25%);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
-
   }
 }
 
@@ -63,13 +60,13 @@ ul li a {
 
 nav {
   background-color: rgb(57, 180, 217);
-  margin-left: auto;
   margin-right: auto;
   position: absolute;
   display: flex;
-  left: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   list-style-type: none;
-  top: 90px;
+  top: 118px;
   width: 300px;
   visibility: hidden;
   opacity: 0;
@@ -127,4 +124,29 @@ main {
 
 body {
   margin: 0;
+}
+
+@media screen and (max-width: 736px) {
+  nav {
+    left: 0;
+    display: block;
+    margin-left: auto;
+  }
+
+  .show {
+    visibility: visible;
+    opacity: 1;
+    animation-name: opening-menu-left;
+    animation-duration: 1s;
+  }
+
+  @keyframes opening-menu-left {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
 }
