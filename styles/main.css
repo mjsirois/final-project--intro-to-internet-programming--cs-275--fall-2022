@@ -1,3 +1,26 @@
+.modal-panel {
+  display: none;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: rgb(0, 0, 0, .5);
+  z-index: 1;
+}
+
+.modal-content-panel {
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 75%;
+  width: 75%;
+  position: absolute;
+}
+
 header {
   text-align: right;
   background-color: rgb(57, 180, 217);
@@ -7,15 +30,12 @@ main {
   color: rgb(74, 74, 74);
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
 body {
   margin: 0;
-  font-family: 'Phoenicia', sans-serif;
-}
-
-.modal-panel {
-  position: fixed;
-}
-
-.modal-content-panel {
-  background-color: white;
+  font-family: 'Open Sans', sans-serif;
 }
