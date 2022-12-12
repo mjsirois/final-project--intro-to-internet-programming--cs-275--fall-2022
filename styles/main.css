@@ -54,10 +54,6 @@ ul li {
   list-style: none;
 }
 
-ul li a {
-  display: block;
-}
-
 nav {
   background-color: rgb(57, 180, 217);
   margin-right: auto;
@@ -128,16 +124,24 @@ body {
 
 @media screen and (max-width: 736px) {
   nav {
-    left: 0;
+    left: 0%;
     display: block;
-    margin-left: auto;
+    width: 150px;
+    transform: none;
+    top: 90px;
   }
+
+  nav ul {
+      flex-direction: column;
+      text-align: left;
+  }
+
 
   .show {
     visibility: visible;
     opacity: 1;
     animation-name: opening-menu-left;
-    animation-duration: 1s;
+    animation-duration: .5s;
   }
 
   @keyframes opening-menu-left {
