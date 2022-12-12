@@ -37,18 +37,16 @@
   visibility: visible;
   opacity: 1;
   animation-name: opening-menu;
-  animation-duration: .2s;
+  animation-duration: 1s;
 }
 
 @keyframes opening-menu {
   from {
     opacity: 0;
-    transform: translateY(-25%);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -64,8 +62,11 @@ nav {
   background-color: rgb(57, 180, 217);
   margin: auto;
   position: absolute;
-  top: 90px;
+  display: flex;
+  top: 118px;
+  width: 300px;
   left: 50%;
+  transform: translate(-50%, -50%);
   visibility: hidden;
   opacity: 0;
 }
@@ -73,10 +74,10 @@ nav {
 nav a {
   background-color: rgb(238, 162, 58);
   display: block;
-  line-height: 30px;
+  line-height: 35px;
   margin: 5px;
-  width: 125px;
-  padding: 5px;
+  width: 135px;
+  padding: 3px;
   text-align: center;
 }
 
@@ -93,7 +94,6 @@ nav > ul {
 
 nav > ul > li > ul {
   position: absolute;
-  left: 0;
   visibility: hidden;
 }
 
@@ -110,8 +110,8 @@ header {
   background-color: rgb(57, 180, 217);
   text-align: right;
   padding-top: 30px;
-  padding-right: 5px;
-  font-size: large;
+  padding-right: 10px;
+  font-size: larger;
 }
 
 main {
