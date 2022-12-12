@@ -3,7 +3,9 @@ const { src, dest, series, watch } = require(`gulp`),
     CSSLinter = require(`gulp-stylelint`),
     jsLinter = require(`gulp-eslint`),
     htmlCompressor = require(`gulp-htmlmin`),
-    cssCompressor = require(`gulp-clean-css`);
+    cssCompressor = require(`gulp-clean-css`),
+    babel = require(`gulp-babel`),
+    jsCompressor = require(`gulp-uglify`);
 
 let validateHTML = () => {
     return src([`index.html`])
@@ -39,12 +41,26 @@ let compressCSS = () => {
         .pipe(dest(`prod/css`));
 };
 
+let transpileJSForDev = () => {
+    return src(`scripts/main.js`)
+        .pipe(babel())
+        .pipe(dest(`temp/scripts`));
+};
+
+let transpileJSForProd = () => {
+    return src(`scripts/main.js`)
+        .pipe(babel())
+        .pipe(jsCompressor())
+        .pipe(dest(`prod/scripts`));
+};
+
 exports.validateHTML = validateHTML;
 exports.lintCSS = lintCSS;
 exports.lintJS = lintJS;
 exports.compressHTML = compressHTML;
 exports.compressCSS = compressCSS;
-
+exports.transpileJSForDev = transpileJSForDev;
+exports.transpileJSForProd = transpileJSForProd;
 
 
 
