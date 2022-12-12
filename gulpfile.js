@@ -78,7 +78,7 @@ let serve = () => {
     watch(`styles/main.css`, series(lintCSS, compressCSS))
         .on(`change`, reload);
 
-    watch(`main.js`, series(lintJS, transpileJSForDev))
+    watch(`scripts/main.js`, series(lintJS, transpileJSForDev))
         .on(`change`, reload);
 };
 
