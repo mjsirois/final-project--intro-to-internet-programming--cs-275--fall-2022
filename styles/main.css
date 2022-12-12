@@ -1,0 +1,21 @@
+header {
+  text-align: right;
+  background-color: rgb(57, 180, 217);
+}
+
+main {
+  color: rgb(74, 74, 74);
+}
+
+body {
+  margin: 0;
+  font-family: 'Phoenicia', sans-serif;
+}
+
+.modal-panel {
+  position: fixed;
+}
+
+.modal-content-panel {
+  background-color: white;
+}
