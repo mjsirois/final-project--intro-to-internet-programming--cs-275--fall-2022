@@ -71,17 +71,16 @@ let serve = () => {
             ]
         }
     });
-
-    watch(`index.html`, series(validateHTML, compressHTML))
-        .on(`change`, reload);
-
-    watch(`main.css`, series(lintCSS, compressCSS))
-        .on(`change`, reload);
-
-    watch(`main.js`, series(lintJS, transpileJSForDev))
-        .on(`change`, reload);
-
 };
+
+watch(`index.html`, series(validateHTML, compressHTML))
+    .on(`change`, reload);
+
+watch(`main.css`, series(lintCSS, compressCSS))
+    .on(`change`, reload);
+
+watch(`main.js`, series(lintJS, transpileJSForDev))
+    .on(`change`, reload);
 
 exports.validateHTML = validateHTML;
 exports.lintCSS = lintCSS;
@@ -97,6 +96,12 @@ exports.serve = series(
     lintJS,
     transpileJSForDev,
     serve
+);
+
+exports.build = series(
+    compressHTML,
+    compressCSS,
+    transpileJSForProd
 );
 
 
