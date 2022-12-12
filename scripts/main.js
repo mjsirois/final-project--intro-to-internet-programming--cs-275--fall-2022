@@ -1,6 +1,8 @@
 window.onload = () => {
-    let showModal = document.getElementById(`start-modal`);
+    let showModal = document.getElementById(`open-modal`);
     let modalBox = document.getElementsByClassName(`modal-panel`)[0];
+    let showMenu = document.getElementById(`open-menu`);
+    let menu = document.getElementsByClassName(`menu-box`)[0];
 
     showModal.addEventListener(`click`, () => {
         modalBox.style.display = `block`;
@@ -18,4 +20,9 @@ window.onload = () => {
         }
     });
 
+    showMenu.addEventListener(`click`, () => {
+        menu.classList.toggle(`show`);
+
+
+    });
 };
